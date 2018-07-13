@@ -1,0 +1,22 @@
+<templateSet group="Android">
+  <template name="onCl" value="public void on$value$Clicked (View view){&#10;&#10;}" description="Define on click method which defined in xml" toReformat="false" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="iffor" value="&#10;if($value$!= null &amp;&amp; !$value$.isEmpty()){&#10;    for($item$ item : $value$){&#10;        item.$cursor$&#10;    }&#10;} else {&#10;    Log.d(&quot;$value$&quot;, &quot;null or empty&quot;);&#10;}" description="Check array size and null state and iterate values" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="value" expression="arrayVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="item" expression="typeOfVariable(VAR)" defaultValue="(value) Object" alwaysStopAt="true" />
+    <variable name="cursor" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="snackbar" value="Snackbar.make(binding.getRoot(), &quot;$text$&quot;, Snackbar.LENGTH_SHORT).show();" description="Create a new snackbar" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
